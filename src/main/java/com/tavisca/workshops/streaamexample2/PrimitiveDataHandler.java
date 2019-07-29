@@ -6,7 +6,7 @@ public class PrimitiveDataHandler {
 
     public static void main(String[] args) throws FileNotFoundException {
         writeToFile("HardcodedOutput.txt");
-        readFromFile("HardcodedOutput.txt");
+        readFromFile("HardcodedOutput.txt"); 
     }
 
     public static void writeToFile(String fileName) throws FileNotFoundException {
@@ -28,15 +28,19 @@ public class PrimitiveDataHandler {
 
         StringBuilder contents = new StringBuilder();
         try (reader){
-            contents.append(reader.readChar());
-            contents.append(reader.readFloat());
-            contents.append(reader.readDouble());
+            char i = reader.readChar();
+            float f = reader.readFloat();
+            double d = reader.readDouble();
+
+            System.out.println("Character " + i);
+            System.out.println("float " + f);
+            System.out.println("double " + d);
 
         } catch (IOException e) {
             System.out.println("Exception occured " + e.getMessage());
             e.printStackTrace();
         }
 
-        System.out.println(contents);
+
     }
 }
