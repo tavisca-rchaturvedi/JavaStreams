@@ -11,7 +11,6 @@ public class FileHandler {
 
     private static void readFileContents(){
         FileReader myFileReader = new FileReader();
-        String data = "Hello! How are you today?";
         try {
             String contents = myFileReader.readFile("DataFile.txt");
             System.out.println("Content of the file is -> " + contents);
