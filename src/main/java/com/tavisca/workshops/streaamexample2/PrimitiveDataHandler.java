@@ -25,7 +25,7 @@ public class PrimitiveDataHandler {
     public static void readFromFile(String fileName) throws FileNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(fileName);
         DataInputStream reader = new DataInputStream(fileInputStream);
-        
+
         StringBuilder contents = new StringBuilder();
         try (reader){
             contents.append(reader.readChar());
